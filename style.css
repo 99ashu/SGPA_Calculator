@@ -1,0 +1,103 @@
+body
+{
+    text-align: center;
+    font-size: 25px;
+    background: linear-gradient(to right, rgb(200, 0, 0), rgb(0, 0, 200));
+    font-family: 'Julius Sans One', sans-serif;
+    color:rgb(234, 234, 234);
+}
+
+h1
+{
+    letter-spacing: 0.1em;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+#firstDiv
+{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#inputText
+{
+    width: 60px;
+}
+
+#parentDiv
+{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 200px 200px 200px;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#enterBtn
+{
+    font-family:'Julius Sans One', sans-serif;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 80px;
+    font-size: 20px;
+    transition: all 0.2s linear;
+}
+
+.textboxClass::placeholder
+{
+    text-align: center;
+}
+
+
+.subjectsClass
+{
+    justify-self: right;
+}
+
+.creditsClass
+{
+    justify-self: left;
+}
+
+#calBtn
+{
+    font-family: 'Julius Sans One', sans-serif;
+    margin: 20px;
+    height: 60px;
+    width: 120px;
+    font-size: 20px;
+    transition: all 0.2s linear;
+}
+
+#reBtn
+{
+    font-family: 'Julius Sans One', sans-serif;
+    margin: 20px;
+    height: 40px;
+    width: 80px;
+    font-size: 20px;
+    transition: all 0.2s linear;
+}
+
+#enterBtn:hover
+{
+    transform: scale(1.1);
+}
+
+#calBtn:hover
+{
+    transform: scale(1.1);
+}
+
+#reBtn:hover
+{
+    transform: scale(1.1);
+}
+
+.btnSwitch
+{
+    display: none;
+}
