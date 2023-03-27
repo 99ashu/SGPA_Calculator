@@ -22,7 +22,7 @@ function addSubjects()
         calBtnVar.classList.toggle("btnSwitch");
         reBtnVar.classList.toggle("btnSwitch");
     }
-
+    
     if (isNaN(totalSubVar))
     {
         return;
@@ -38,8 +38,8 @@ function addSubjects()
         points[i] = document.createElement("input");
         parentDivVar.appendChild(points[i]);
         points[i].classList.add("textboxClass");
-        points[i].placeholder = `Subject ${i+1} Points (5-10)`;
-        points[i].type = "number";
+        points[i].placeholder = `Subject ${i+1} Grade`;
+        points[i].type = "text";
 
         credits[i] = document.createElement("input");
         parentDivVar.appendChild(credits[i]);
@@ -49,20 +49,45 @@ function addSubjects()
         credits[i].type = "number";
     }
 
-    enterBtnVar.setAttribute("disabled","disabled");
+    enterBtnVar.classList.toggle("btnSwitch");
 }
 
 function calculate()
 {
     for (var i = 0; i < totalSubVar; ++i)
     {
+        if(points[i].value == "S" || points[i].value == "s" || points[i].value == "A+" || points[i].value == "a+")
+        {
+            points[i].value = 10;
+        }
+        if(points[i].value == "A" || points[i].value == "a")
+        {
+            points[i].value = 9;
+        }
+        if(points[i].value == "B" || points[i].value == "b")
+        {
+            points[i].value = 8;
+        }
+        if(points[i].value == "C" || points[i].value == "c")
+        {
+            points[i].value = 7;
+        }
+        if(points[i].value == "D" || points[i].value == "d")
+        {
+            points[i].value = 6;
+        }
+        if(points[i].value == "E" || points[i].value == "e")
+        {
+            points[i].value = 5;
+        }
+
         sumOne += parseInt(points[i].value) * parseInt(credits[i].value);
         sumTwo += parseInt(credits[i].value);
     }
 
     if(isNaN(sumOne/sumTwo))
     {
-        alert("Please fill all the cells!");
+        alert("Please fill all the cells correctly!");
         window.location.reload();
         return;
     }

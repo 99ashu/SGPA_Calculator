@@ -2,7 +2,7 @@ body
 {
     text-align: center;
     font-size: 25px;
-    background: linear-gradient(to right, rgb(200, 0, 0), rgb(0, 0, 200));
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     font-family: 'Julius Sans One', sans-serif;
     color:rgb(234, 234, 234);
 }
@@ -44,6 +44,11 @@ h1
     width: 80px;
     font-size: 20px;
     transition: all 0.2s linear;
+}
+
+.textboxClass
+{
+    text-align: center;
 }
 
 .textboxClass::placeholder
